@@ -3,3 +3,4 @@ node_modules
 .tmp
 npm-debug.log
 src/Ch01-Arrays/01_07/end/find-item
+src/Ch01-Arrays/01_07/begin/find-item
