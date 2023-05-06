@@ -29,7 +29,7 @@ int main()
     string targetStr = "cherry";
     size_t strIndex = findItem(strArray, strSize, targetStr);
 
-    if (intIndex != intSize)
+    if (intIndex != -1)
     {
         cout << "The target integer " << targetInt << " is found at index " << intIndex << "." << endl;
     }
@@ -38,7 +38,7 @@ int main()
         cout << "The target integer " << targetInt << " is not found in the array." << endl;
     }
 
-    if (strIndex != strSize)
+    if (strIndex != -1)
     {
         cout << "The target string \"" << targetStr << "\" is found at index " << strIndex << "." << endl;
     }
