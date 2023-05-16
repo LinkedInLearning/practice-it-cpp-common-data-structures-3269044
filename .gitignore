@@ -4,3 +4,14 @@ node_modules
 npm-debug.log
 src/Ch01-Arrays/01_07/end/find-item
 src/Ch01-Arrays/01_07/begin/find-item
+*.json
+src/Ch01-Arrays/01_05/end/find-primes
+*.plist
+src/Ch01-Arrays/01_05/end/find-primes.dSYM/Contents/Resources/DWARF/find-primes
+src/Ch01-Arrays/01_07/end/find-item.dSYM/Contents/Resources/DWARF/find-item
+src/Ch02-Stacks/02_01/end/stack.dSYM/Contents/Resources/DWARF/stack
+src/Ch02-Stacks/02_03/end/reverse-string
+src/Ch02-Stacks/02_03/end/reverse-string.dSYM/Contents/Resources/DWARF/reverse-string
+src/Ch02-Stacks/02_05/end/history
+src/Ch02-Stacks/02_05/end/history.dSYM/Contents/Resources/DWARF/history
+src/Ch02-Stacks/02_01/end/stack
