@@ -3,9 +3,10 @@ using namespace std;
 
 int main()
 {
-    // Declares array of 5 integers
+    // Declares an array of 5 integers
     int numbers[5];
-    // Declares array of 10 strings
+
+    // Declares an array of 10 strings
     string names[10];
 
     // Initializes the array
