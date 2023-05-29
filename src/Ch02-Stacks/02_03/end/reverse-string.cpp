@@ -31,6 +31,8 @@ int main()
     string str = "Hello, World!";
     string revStr = reverseString(str);
 
+    cout << reverseString("Hello, World!") << endl;
+
     cout << "Original String: " << str << endl;
     cout << "Reversed String: " << revStr << endl;
 
