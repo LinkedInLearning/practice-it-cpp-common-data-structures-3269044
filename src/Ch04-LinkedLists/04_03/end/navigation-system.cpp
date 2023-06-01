@@ -16,7 +16,7 @@ public:
     }
 
     // Add a new stop to the route
-    void addStop(const string &stop)
+    void add_stop(const string &stop)
     {
         stops.push_back(stop);
         if (current == stops.end())
@@ -26,7 +26,7 @@ public:
     }
 
     // Advance to the next stop on the route
-    void nextStop()
+    void next_stop()
     {
         if (!stops.empty())
         {
@@ -39,7 +39,7 @@ public:
     }
 
     // Go back to the previous stop on the route
-    void prevStop()
+    void prev_stop()
     {
         if (!stops.empty())
         {
@@ -52,7 +52,7 @@ public:
     }
 
     // Display the current stop on the route
-    void currentStop()
+    void current_stop()
     {
         if (!stops.empty())
         {
@@ -69,20 +69,20 @@ int main()
 {
     Route route;
 
-    route.addStop("Los Angeles");    
-    route.addStop("Las Vegas");
-    route.addStop("Salt Lake City");
-    route.addStop("Denver");
+    route.add_stop("Los Angeles");    
+    route.add_stop("Las Vegas");
+    route.add_stop("Salt Lake City");
+    route.add_stop("Denver");
 
-    route.currentStop(); // "Current stop: Los Angeles"
-    route.nextStop();
-    route.currentStop(); // "Current stop: Las Vegas"
-    route.nextStop();
-    route.currentStop(); // "Current stop: Salt Lake City"
-    route.nextStop();
-    route.currentStop(); // "Current stop: Denver"
-    route.prevStop();
-    route.currentStop(); // "Current stop: Salt Lake City"
+    route.current_stop(); // "Current stop: Los Angeles"
+    route.next_stop();
+    route.current_stop(); // "Current stop: Las Vegas"
+    route.next_stop();
+    route.current_stop(); // "Current stop: Salt Lake City"
+    route.next_stop();
+    route.current_stop(); // "Current stop: Denver"
+    route.prev_stop();
+    route.current_stop(); // "Current stop: Salt Lake City"
 
     return 0;
 }
