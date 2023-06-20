@@ -9,7 +9,7 @@ private:
 
 public:
     // Add a new sensor reading to the list
-    void add_reading(double value)
+    void addReading(double value)
     {
         readings.push_back(value);
     }
@@ -29,7 +29,7 @@ public:
         {
             if(*current >= 2 * (*prev) || *current <= 0.5 * (*prev))
             {
-                *current = *prev;
+                *current = average;
             }
             ++prev;
             ++current;
@@ -37,13 +37,13 @@ public:
     }
 
     // Print all sensor readings
-    void print_data()
+    void printData()
     {
         for(const auto &reading : readings)
         {
             cout << reading << " ";
         }
-        cout << endl;
+        cout << "\n";
     }
 };
 

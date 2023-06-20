@@ -82,6 +82,15 @@ int main()
     route.current_stop(); // "Current stop: Denver"
     route.prev_stop();
     route.current_stop(); // "Current stop: Salt Lake City"
+    route.current_stop(); // "Current stop: Los Angeles"
+    route.next_stop();
+    route.current_stop(); // "Current stop: Las Vegas"
+    route.next_stop();
+    route.current_stop(); // "Current stop: Salt Lake City"
+    route.next_stop();
+    route.current_stop(); // "Current stop: Denver"
+    route.prev_stop();
+    route.current_stop(); // "Current stop: Salt Lake City"
 
     return 0;
 }
