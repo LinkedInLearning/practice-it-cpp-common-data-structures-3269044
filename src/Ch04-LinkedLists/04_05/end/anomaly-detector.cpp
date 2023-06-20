@@ -9,7 +9,7 @@ private:
 
 public:
     // Add a new sensor reading to the list
-    void addReading(double value)
+    void add_reading(double value)
     {
         readings.push_back(value);
     }
@@ -29,7 +29,7 @@ public:
         {
             if(*current >= 2 * (*prev) || *current <= 0.5 * (*prev))
             {
-                *current = average;
+                *current = *prev;
             }
             ++prev;
             ++current;
@@ -37,13 +37,13 @@ public:
     }
 
     // Print all sensor readings
-    void printData()
+    void print_data()
     {
         for(const auto &reading : readings)
         {
             cout << reading << " ";
         }
-        cout << "\n";
+        cout << endl;
     }
 };
 
@@ -51,9 +51,9 @@ int main()
 {
     SensorData sensorData;
     sensorData.add_reading(10.0);
-    sensorData.add_reading(24.0);
+    sensorData.add_reading(24.0);   // spike
     sensorData.add_reading(6.0);
-    sensorData.add_reading(2.0);
+    sensorData.add_reading(2.0);    // dip
     sensorData.add_reading(4.0);
 
     cout << "Sensor data: ";

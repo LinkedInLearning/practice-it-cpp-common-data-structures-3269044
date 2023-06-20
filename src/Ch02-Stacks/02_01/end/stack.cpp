@@ -21,7 +21,7 @@ int main() {
 
     // Loop and call pop() until the stack is empty
     while (!intStack.empty())
-    {        
+    {
         cout << "Top element is: " << intStack.top() << endl; // Should output 10        
         intStack.pop();
     }
