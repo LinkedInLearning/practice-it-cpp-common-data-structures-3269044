@@ -9,62 +9,59 @@ private:
 
 public:
     // Add a new sensor reading to the list
-    void addReading(double value)
+    void add_reading(double value)
     {
         readings.push_back(value);
     }
 
     // Go through the list and replace any spike or dip with the previous reading
-    void smoothData()
+    void smooth_data()
     {
-        if (readings.size() < 3)
+        if(readings.size() < 2)
         {
             return;
         }
-
         auto prev = readings.begin();
         auto current = prev;
         ++current;
-        auto next = current;
-        ++next;
 
-        while (next != readings.end())
+        while(current != readings.end())
         {
-            double average = (*prev + *next) / 2;
-            if (*current >= 2 * average || *current <= 0.5 * average)
+            if(*current >= 2 * (*prev) || *current <= 0.5 * (*prev))
             {
-                *current = average;
+                *current = *prev;
             }
             ++prev;
             ++current;
-            ++next;
         }
     }
 
     // Print all sensor readings
-    void printData()
+    void print_data()
     {
-        for (const auto &reading : readings)
+        for(const auto &reading : readings)
         {
             cout << reading << " ";
         }
-        cout << "\n";
+        cout << endl;
     }
 };
 
 int main()
 {
     SensorData sensorData;
+    sensorData.add_reading(10.0);
+    sensorData.add_reading(24.0);
+    sensorData.add_reading(6.0);
+    sensorData.add_reading(2.0);
+    sensorData.add_reading(4.0);
 
-    sensorData.addReading(10.0);
-    sensorData.addReading(20.0); // A spike
-    sensorData.addReading(5.0);
-    sensorData.addReading(2.0); // A dip
-    sensorData.addReading(7.0);
+    cout << "Sensor data: ";
+    sensorData.print_data();
 
-    sensorData.printData(); // "10 20 5 2 7"
-    sensorData.smoothData();
-    sensorData.printData(); // "10 10 5 5 7"
+    cout << "Normalized sensor data: ";
+    sensorData.smooth_data();
+    sensorData.print_data();
 
     return 0;
 }
