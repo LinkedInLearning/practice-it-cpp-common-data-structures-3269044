@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//Modified by Fabricio
 int calculateSum(const int arr[], size_t size)
 {
     //...TODO: implement
